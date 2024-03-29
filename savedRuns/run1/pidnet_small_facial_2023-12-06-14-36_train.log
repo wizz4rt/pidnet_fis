@@ -1,0 +1,125 @@
+2023-12-06 14:36:20,727 Namespace(cfg='configs/facial/pidnet_small_facial.yaml', opts=[], seed=304)
+2023-12-06 14:36:20,728 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  DATASET: facial
+  EXTRA_TRAIN_SET: 
+  NUM_CLASSES: 15
+  ROOT: data/
+  TEST_SET: list/facial/val.lst
+  TRAIN_SET: list/facial/train.lst
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  CLASS_BALANCE: False
+  OHEMKEEP: 131072
+  OHEMTHRES: 0.9
+  SB_WEIGHTS: 1.0
+  USE_OHEM: True
+MODEL:
+  ALIGN_CORNERS: True
+  NAME: pidnet_s
+  NUM_OUTPUTS: 2
+  PRETRAINED: pretrained_models/imagenet/PIDNet_S_ImageNet.pth.tar
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 10
+TEST:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: False
+  IMAGE_SIZE: [616, 616]
+  MODEL_FILE: 
+  MULTI_SCALE: False
+  OUTPUT_INDEX: 1
+TRAIN:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 6
+  BEGIN_EPOCH: 0
+  END_EPOCH: 200
+  EXTRA_EPOCH: 0
+  EXTRA_LR: 0.001
+  FLIP: False
+  IGNORE_LABEL: 255
+  IMAGE_SIZE: [616, 616]
+  LR: 0.005
+  MOMENTUM: 0.9
+  MULTI_SCALE: False
+  NESTEROV: False
+  OPTIMIZER: sgd
+  RESUME: False
+  SCALE_FACTOR: 1
+  SHUFFLE: True
+  WD: 0.0005
+WORKERS: 8
+2023-12-06 14:36:20,866 Attention!!!
+2023-12-06 14:36:20,867 Loaded 302 parameters!
+2023-12-06 14:36:20,867 Over!!!
+2023-12-06 14:36:33,084 Namespace(cfg='configs/facial/pidnet_small_facial.yaml', opts=[], seed=304)
+2023-12-06 14:36:33,084 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  DATASET: facial
+  EXTRA_TRAIN_SET: 
+  NUM_CLASSES: 15
+  ROOT: data/
+  TEST_SET: list/facial/val.lst
+  TRAIN_SET: list/facial/train.lst
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  CLASS_BALANCE: False
+  OHEMKEEP: 131072
+  OHEMTHRES: 0.9
+  SB_WEIGHTS: 1.0
+  USE_OHEM: True
+MODEL:
+  ALIGN_CORNERS: True
+  NAME: pidnet_s
+  NUM_OUTPUTS: 2
+  PRETRAINED: pretrained_models/imagenet/PIDNet_S_ImageNet.pth.tar
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 10
+TEST:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: False
+  IMAGE_SIZE: [616, 616]
+  MODEL_FILE: 
+  MULTI_SCALE: False
+  OUTPUT_INDEX: 1
+TRAIN:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 6
+  BEGIN_EPOCH: 0
+  END_EPOCH: 200
+  EXTRA_EPOCH: 0
+  EXTRA_LR: 0.001
+  FLIP: False
+  IGNORE_LABEL: 255
+  IMAGE_SIZE: [616, 616]
+  LR: 0.005
+  MOMENTUM: 0.9
+  MULTI_SCALE: False
+  NESTEROV: False
+  OPTIMIZER: sgd
+  RESUME: False
+  SCALE_FACTOR: 1
+  SHUFFLE: True
+  WD: 0.0005
+WORKERS: 8
+2023-12-06 14:36:33,218 Attention!!!
+2023-12-06 14:36:33,218 Loaded 302 parameters!
+2023-12-06 14:36:33,219 Over!!!
+2023-12-06 14:38:02,020 Epoch: [0/200] Iter:[0/18736], Time: 86.86, lr: [0.005], Loss: 19.606382, Acc:0.031492, Semantic loss: 8.653719, BCE loss: 3.637398, SB loss: 7.315266, Data Time: 11.38
+2023-12-06 14:38:04,957 Epoch: [0/200] Iter:[10/18736], Time: 0.29, lr: [0.004999987991031703], Loss: 12.240601, Acc:0.391926, Semantic loss: 5.459493, BCE loss: 2.664905, SB loss: 4.116202, Data Time: 0.01
+2023-12-06 14:38:12,558 Epoch: [0/200] Iter:[20/18736], Time: 0.76, lr: [0.0049999759820602], Loss: 9.868888, Acc:0.558744, Semantic loss: 4.385098, BCE loss: 2.276878, SB loss: 3.206912, Data Time: 0.46

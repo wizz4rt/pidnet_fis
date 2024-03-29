@@ -1,0 +1,1 @@
+python models/speed/pidnet_speed.py --a 'pidnet-s' --c 15 --r 616 616

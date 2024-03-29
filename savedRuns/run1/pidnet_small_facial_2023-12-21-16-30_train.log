@@ -1,0 +1,171 @@
+2023-12-21 16:30:04,442 Namespace(cfg='configs/facial/pidnet_small_facial.yaml', opts=[], seed=304)
+2023-12-21 16:30:04,442 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  DATASET: facial
+  EXTRA_TRAIN_SET: 
+  NUM_CLASSES: 15
+  ROOT: data/
+  TEST_SET: list/facial/val.lst
+  TRAIN_SET: list/facial/train.lst
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  CLASS_BALANCE: False
+  OHEMKEEP: 131072
+  OHEMTHRES: 0.9
+  SB_WEIGHTS: 1.0
+  USE_OHEM: True
+MODEL:
+  ALIGN_CORNERS: True
+  NAME: pidnet_s
+  NUM_OUTPUTS: 2
+  PRETRAINED: pretrained_models/imagenet/PIDNet_S_ImageNet.pth.tar
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 10
+TEST:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: False
+  IMAGE_SIZE: [616, 616]
+  MODEL_FILE: 
+  MULTI_SCALE: False
+  OUTPUT_INDEX: 1
+TRAIN:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 12
+  BEGIN_EPOCH: 0
+  END_EPOCH: 200
+  EXTRA_EPOCH: 0
+  EXTRA_LR: 0.001
+  FLIP: False
+  IGNORE_LABEL: 255
+  IMAGE_SIZE: [616, 616]
+  LR: 0.005
+  MOMENTUM: 0.9
+  MULTI_SCALE: False
+  NESTEROV: False
+  OPTIMIZER: sgd
+  RESUME: False
+  SCALE_FACTOR: 1
+  SHUFFLE: True
+  WD: 0.0005
+WORKERS: 8
+2023-12-21 16:30:04,585 Attention!!!
+2023-12-21 16:30:04,586 Loaded 302 parameters!
+2023-12-21 16:30:04,586 Over!!!
+2023-12-21 16:31:06,309 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:06,311 Epoch: [0/200] Iter:[0/9368], Time: 60.43, lr: [0.005], Loss: 20.731668, Acc:0.035395, Semantic loss: 8.562307, BCE loss: 4.818458, SB loss: 7.350904, Data Time: 6.34
+2023-12-21 16:31:09,503 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:09,519 Epoch: [0/200] Iter:[10/9368], Time: 0.31, lr: [0.0049999759820602], Loss: 11.909861, Acc:0.412870, Semantic loss: 5.282230, BCE loss: 2.629073, SB loss: 3.998558, Data Time: 0.00
+2023-12-21 16:31:12,994 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:13,010 Epoch: [0/200] Iter:[20/9368], Time: 0.35, lr: [0.004999951964107581], Loss: 9.258705, Acc:0.608441, Semantic loss: 4.135102, BCE loss: 2.100173, SB loss: 3.023430, Data Time: 0.01
+2023-12-21 16:31:16,431 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:16,447 Epoch: [0/200] Iter:[30/9368], Time: 0.34, lr: [0.004999927946142142], Loss: 7.619666, Acc:0.681676, Semantic loss: 3.354618, BCE loss: 1.810461, SB loss: 2.454587, Data Time: 0.00
+2023-12-21 16:31:19,859 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:19,875 Epoch: [0/200] Iter:[40/9368], Time: 0.34, lr: [0.004999903928163885], Loss: 6.639060, Acc:0.724088, Semantic loss: 2.885464, BCE loss: 1.624428, SB loss: 2.129167, Data Time: 0.00
+2023-12-21 16:31:23,459 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:23,475 Epoch: [0/200] Iter:[50/9368], Time: 0.36, lr: [0.004999879910172808], Loss: 5.994026, Acc:0.753530, Semantic loss: 2.588450, BCE loss: 1.488441, SB loss: 1.917135, Data Time: 0.00
+2023-12-21 16:31:27,184 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:27,199 Epoch: [0/200] Iter:[60/9368], Time: 0.37, lr: [0.004999855892168912], Loss: 5.516281, Acc:0.776103, Semantic loss: 2.364980, BCE loss: 1.383705, SB loss: 1.767596, Data Time: 0.00
+2023-12-21 16:31:30,983 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:31,001 Epoch: [0/200] Iter:[70/9368], Time: 0.38, lr: [0.004999831874152196], Loss: 5.151206, Acc:0.793617, Semantic loss: 2.191642, BCE loss: 1.300079, SB loss: 1.659485, Data Time: 0.00
+2023-12-21 16:31:34,820 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:34,838 Epoch: [0/200] Iter:[80/9368], Time: 0.39, lr: [0.00499980785612266], Loss: 4.859577, Acc:0.808165, Semantic loss: 2.053845, BCE loss: 1.234223, SB loss: 1.571509, Data Time: 0.00
+2023-12-21 16:31:38,586 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:38,605 Epoch: [0/200] Iter:[90/9368], Time: 0.38, lr: [0.004999783838080304], Loss: 4.641130, Acc:0.819444, Semantic loss: 1.953923, BCE loss: 1.183595, SB loss: 1.503613, Data Time: 0.00
+2023-12-21 16:31:42,494 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:42,511 Epoch: [0/200] Iter:[100/9368], Time: 0.39, lr: [0.004999759820025128], Loss: 4.460191, Acc:0.828369, Semantic loss: 1.872611, BCE loss: 1.140900, SB loss: 1.446680, Data Time: 0.01
+2023-12-21 16:31:46,261 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:46,279 Epoch: [0/200] Iter:[110/9368], Time: 0.38, lr: [0.004999735801957133], Loss: 4.303537, Acc:0.836638, Semantic loss: 1.800044, BCE loss: 1.106582, SB loss: 1.396910, Data Time: 0.01
+2023-12-21 16:31:50,211 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:50,227 Epoch: [0/200] Iter:[120/9368], Time: 0.40, lr: [0.004999711783876318], Loss: 4.167885, Acc:0.843475, Semantic loss: 1.737712, BCE loss: 1.074469, SB loss: 1.355704, Data Time: 0.00
+2023-12-21 16:31:53,955 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:53,973 Epoch: [0/200] Iter:[130/9368], Time: 0.37, lr: [0.004999687765782682], Loss: 4.044116, Acc:0.849832, Semantic loss: 1.681071, BCE loss: 1.044938, SB loss: 1.318108, Data Time: 0.00
+2023-12-21 16:31:57,741 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:31:57,760 Epoch: [0/200] Iter:[140/9368], Time: 0.38, lr: [0.004999663747676226], Loss: 3.946418, Acc:0.854955, Semantic loss: 1.637302, BCE loss: 1.021789, SB loss: 1.287327, Data Time: 0.01
+2023-12-21 16:32:01,613 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:01,630 Epoch: [0/200] Iter:[150/9368], Time: 0.39, lr: [0.0049996397295569515], Loss: 3.845800, Acc:0.860286, Semantic loss: 1.589935, BCE loss: 0.998991, SB loss: 1.256873, Data Time: 0.00
+2023-12-21 16:32:05,373 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:05,391 Epoch: [0/200] Iter:[160/9368], Time: 0.38, lr: [0.0049996157114248554], Loss: 3.756676, Acc:0.865081, Semantic loss: 1.548928, BCE loss: 0.977232, SB loss: 1.230516, Data Time: 0.01
+2023-12-21 16:32:09,281 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:09,298 Epoch: [0/200] Iter:[170/9368], Time: 0.39, lr: [0.004999591693279938], Loss: 3.688695, Acc:0.868853, Semantic loss: 1.519757, BCE loss: 0.959483, SB loss: 1.209455, Data Time: 0.01
+2023-12-21 16:32:13,118 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:13,137 Epoch: [0/200] Iter:[180/9368], Time: 0.38, lr: [0.004999567675122202], Loss: 3.631116, Acc:0.872198, Semantic loss: 1.495410, BCE loss: 0.941210, SB loss: 1.194497, Data Time: 0.00
+2023-12-21 16:32:16,579 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:16,598 Epoch: [0/200] Iter:[190/9368], Time: 0.35, lr: [0.004999543656951645], Loss: 3.569827, Acc:0.875143, Semantic loss: 1.467063, BCE loss: 0.925297, SB loss: 1.177468, Data Time: 0.00
+2023-12-21 16:32:20,498 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:20,517 Epoch: [0/200] Iter:[200/9368], Time: 0.39, lr: [0.0049995196387682675], Loss: 3.519234, Acc:0.877715, Semantic loss: 1.444385, BCE loss: 0.912239, SB loss: 1.162609, Data Time: 0.00
+2023-12-21 16:32:24,375 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:24,397 Epoch: [0/200] Iter:[210/9368], Time: 0.39, lr: [0.004999495620572069], Loss: 3.464739, Acc:0.880711, Semantic loss: 1.419865, BCE loss: 0.897714, SB loss: 1.147160, Data Time: 0.00
+2023-12-21 16:32:28,152 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:28,171 Epoch: [0/200] Iter:[220/9368], Time: 0.38, lr: [0.00499947160236305], Loss: 3.414354, Acc:0.883570, Semantic loss: 1.396334, BCE loss: 0.885658, SB loss: 1.132361, Data Time: 0.01
+2023-12-21 16:32:31,948 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:31,964 Epoch: [0/200] Iter:[230/9368], Time: 0.38, lr: [0.00499944758414121], Loss: 3.372750, Acc:0.885817, Semantic loss: 1.378882, BCE loss: 0.874379, SB loss: 1.119489, Data Time: 0.01
+2023-12-21 16:32:35,881 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:35,897 Epoch: [0/200] Iter:[240/9368], Time: 0.39, lr: [0.004999423565906549], Loss: 3.339418, Acc:0.887888, Semantic loss: 1.365595, BCE loss: 0.865081, SB loss: 1.108742, Data Time: 0.01
+2023-12-21 16:32:39,593 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:39,609 Epoch: [0/200] Iter:[250/9368], Time: 0.37, lr: [0.004999399547659067], Loss: 3.295729, Acc:0.890019, Semantic loss: 1.345125, BCE loss: 0.854478, SB loss: 1.096126, Data Time: 0.00
+2023-12-21 16:32:43,279 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:43,312 Epoch: [0/200] Iter:[260/9368], Time: 0.37, lr: [0.004999375529398765], Loss: 3.258797, Acc:0.892065, Semantic loss: 1.327945, BCE loss: 0.845000, SB loss: 1.085852, Data Time: 0.00
+2023-12-21 16:32:47,110 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:47,127 Epoch: [0/200] Iter:[270/9368], Time: 0.38, lr: [0.004999351511125641], Loss: 3.227576, Acc:0.893846, Semantic loss: 1.314576, BCE loss: 0.837036, SB loss: 1.075963, Data Time: 0.00
+2023-12-21 16:32:50,700 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:50,718 Epoch: [0/200] Iter:[280/9368], Time: 0.36, lr: [0.004999327492839696], Loss: 3.196997, Acc:0.895496, Semantic loss: 1.299590, BCE loss: 0.830169, SB loss: 1.067238, Data Time: 0.01
+2023-12-21 16:32:54,675 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:54,691 Epoch: [0/200] Iter:[290/9368], Time: 0.40, lr: [0.004999303474540929], Loss: 3.169615, Acc:0.896944, Semantic loss: 1.288690, BCE loss: 0.821269, SB loss: 1.059656, Data Time: 0.01
+2023-12-21 16:32:58,493 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:32:58,509 Epoch: [0/200] Iter:[300/9368], Time: 0.38, lr: [0.004999279456229342], Loss: 3.144420, Acc:0.898237, Semantic loss: 1.278626, BCE loss: 0.814532, SB loss: 1.051263, Data Time: 0.00
+2023-12-21 16:33:02,271 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:02,287 Epoch: [0/200] Iter:[310/9368], Time: 0.38, lr: [0.004999255437904933], Loss: 3.116768, Acc:0.899754, Semantic loss: 1.264712, BCE loss: 0.808677, SB loss: 1.043379, Data Time: 0.00
+2023-12-21 16:33:06,167 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:06,182 Epoch: [0/200] Iter:[320/9368], Time: 0.39, lr: [0.0049992314195677024], Loss: 3.093177, Acc:0.900994, Semantic loss: 1.254100, BCE loss: 0.802266, SB loss: 1.036811, Data Time: 0.00
+2023-12-21 16:33:09,901 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:09,916 Epoch: [0/200] Iter:[330/9368], Time: 0.37, lr: [0.0049992074012176506], Loss: 3.064922, Acc:0.902430, Semantic loss: 1.241615, BCE loss: 0.794461, SB loss: 1.028847, Data Time: 0.00
+2023-12-21 16:33:13,652 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:13,670 Epoch: [0/200] Iter:[340/9368], Time: 0.38, lr: [0.004999183382854777], Loss: 3.046017, Acc:0.903539, Semantic loss: 1.234576, BCE loss: 0.788588, SB loss: 1.022853, Data Time: 0.01
+2023-12-21 16:33:17,597 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:17,613 Epoch: [0/200] Iter:[350/9368], Time: 0.39, lr: [0.004999159364479082], Loss: 3.024388, Acc:0.904760, Semantic loss: 1.224499, BCE loss: 0.783868, SB loss: 1.016022, Data Time: 0.00
+2023-12-21 16:33:21,249 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:21,265 Epoch: [0/200] Iter:[360/9368], Time: 0.37, lr: [0.004999135346090565], Loss: 3.001045, Acc:0.906011, Semantic loss: 1.213896, BCE loss: 0.778255, SB loss: 1.008894, Data Time: 0.00
+2023-12-21 16:33:25,091 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:25,107 Epoch: [0/200] Iter:[370/9368], Time: 0.38, lr: [0.004999111327689226], Loss: 2.983857, Acc:0.907046, Semantic loss: 1.206588, BCE loss: 0.773925, SB loss: 1.003345, Data Time: 0.01
+2023-12-21 16:33:28,864 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:28,880 Epoch: [0/200] Iter:[380/9368], Time: 0.38, lr: [0.004999087309275066], Loss: 2.963865, Acc:0.908133, Semantic loss: 1.197326, BCE loss: 0.768678, SB loss: 0.997860, Data Time: 0.00
+2023-12-21 16:33:32,596 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:32,612 Epoch: [0/200] Iter:[390/9368], Time: 0.37, lr: [0.004999063290848082], Loss: 2.945701, Acc:0.909135, Semantic loss: 1.189399, BCE loss: 0.764562, SB loss: 0.991740, Data Time: 0.01
+2023-12-21 16:33:36,440 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:36,458 Epoch: [0/200] Iter:[400/9368], Time: 0.38, lr: [0.004999039272408278], Loss: 2.926355, Acc:0.910205, Semantic loss: 1.180445, BCE loss: 0.759833, SB loss: 0.986077, Data Time: 0.00
+2023-12-21 16:33:40,515 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:40,531 Epoch: [0/200] Iter:[410/9368], Time: 0.41, lr: [0.004999015253955651], Loss: 2.908610, Acc:0.911155, Semantic loss: 1.172972, BCE loss: 0.753984, SB loss: 0.981654, Data Time: 0.00
+2023-12-21 16:33:44,225 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:44,241 Epoch: [0/200] Iter:[420/9368], Time: 0.37, lr: [0.0049989912354902015], Loss: 2.891940, Acc:0.912048, Semantic loss: 1.165884, BCE loss: 0.748585, SB loss: 0.977470, Data Time: 0.00
+2023-12-21 16:33:48,045 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:48,061 Epoch: [0/200] Iter:[430/9368], Time: 0.38, lr: [0.00499896721701193], Loss: 2.877740, Acc:0.912862, Semantic loss: 1.159689, BCE loss: 0.744666, SB loss: 0.973385, Data Time: 0.00
+2023-12-21 16:33:51,866 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:51,882 Epoch: [0/200] Iter:[440/9368], Time: 0.38, lr: [0.0049989431985208365], Loss: 2.862358, Acc:0.913766, Semantic loss: 1.152568, BCE loss: 0.741516, SB loss: 0.968274, Data Time: 0.00
+2023-12-21 16:33:55,810 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:55,826 Epoch: [0/200] Iter:[450/9368], Time: 0.39, lr: [0.00499891918001692], Loss: 2.845637, Acc:0.914648, Semantic loss: 1.145411, BCE loss: 0.736913, SB loss: 0.963313, Data Time: 0.00
+2023-12-21 16:33:59,502 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:33:59,520 Epoch: [0/200] Iter:[460/9368], Time: 0.37, lr: [0.004998895161500181], Loss: 2.831051, Acc:0.915490, Semantic loss: 1.138732, BCE loss: 0.733271, SB loss: 0.959048, Data Time: 0.00
+2023-12-21 16:34:03,555 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:03,571 Epoch: [0/200] Iter:[470/9368], Time: 0.41, lr: [0.004998871142970619], Loss: 2.818962, Acc:0.916278, Semantic loss: 1.134493, BCE loss: 0.729434, SB loss: 0.955036, Data Time: 0.00
+2023-12-21 16:34:07,224 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:07,239 Epoch: [0/200] Iter:[480/9368], Time: 0.37, lr: [0.004998847124428235], Loss: 2.805060, Acc:0.917009, Semantic loss: 1.128226, BCE loss: 0.726198, SB loss: 0.950637, Data Time: 0.00
+2023-12-21 16:34:11,022 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:11,054 Epoch: [0/200] Iter:[490/9368], Time: 0.38, lr: [0.0049988231058730286], Loss: 2.793053, Acc:0.917684, Semantic loss: 1.122718, BCE loss: 0.722934, SB loss: 0.947400, Data Time: 0.00
+2023-12-21 16:34:14,792 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:14,807 Epoch: [0/200] Iter:[500/9368], Time: 0.38, lr: [0.004998799087304999], Loss: 2.782193, Acc:0.918288, Semantic loss: 1.118789, BCE loss: 0.719422, SB loss: 0.943982, Data Time: 0.00
+2023-12-21 16:34:18,631 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:18,647 Epoch: [0/200] Iter:[510/9368], Time: 0.39, lr: [0.004998775068724146], Loss: 2.769622, Acc:0.918975, Semantic loss: 1.113387, BCE loss: 0.715669, SB loss: 0.940566, Data Time: 0.01
+2023-12-21 16:34:22,477 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:22,495 Epoch: [0/200] Iter:[520/9368], Time: 0.38, lr: [0.004998751050130471], Loss: 2.757767, Acc:0.919646, Semantic loss: 1.108303, BCE loss: 0.712390, SB loss: 0.937073, Data Time: 0.01
+2023-12-21 16:34:26,360 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:26,394 Epoch: [0/200] Iter:[530/9368], Time: 0.39, lr: [0.0049987270315239715], Loss: 2.745717, Acc:0.920305, Semantic loss: 1.103235, BCE loss: 0.709123, SB loss: 0.933358, Data Time: 0.00
+2023-12-21 16:34:30,250 Summary name main loss is illegal; using main_loss instead.
+2023-12-21 16:34:30,266 Epoch: [0/200] Iter:[540/9368], Time: 0.39, lr: [0.00499870301290465], Loss: 2.735684, Acc:0.920825, Semantic loss: 1.099263, BCE loss: 0.706024, SB loss: 0.930396, Data Time: 0.00

@@ -1,0 +1,81 @@
+2023-12-22 15:10:25,482 Namespace(cfg='configs/facial/pidnet_small_facial.yaml', opts=[], seed=304)
+2023-12-22 15:10:25,482 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  DATASET: facial
+  EXTRA_TRAIN_SET: 
+  NUM_CLASSES: 15
+  ROOT: data/
+  TEST_SET: list/facial/val.lst
+  TRAIN_SET: list/facial/train.lst
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  CLASS_BALANCE: False
+  OHEMKEEP: 131072
+  OHEMTHRES: 0.9
+  SB_WEIGHTS: 1.0
+  USE_OHEM: True
+MODEL:
+  ALIGN_CORNERS: True
+  NAME: pidnet_s
+  NUM_OUTPUTS: 2
+  PRETRAINED: pretrained_models/imagenet/PIDNet_S_ImageNet.pth.tar
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 10
+TEST:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: False
+  IMAGE_SIZE: [616, 616]
+  MODEL_FILE: 
+  MULTI_SCALE: False
+  OUTPUT_INDEX: 1
+TRAIN:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 12
+  BEGIN_EPOCH: 0
+  END_EPOCH: 200
+  EXTRA_EPOCH: 0
+  EXTRA_LR: 0.001
+  FLIP: False
+  IGNORE_LABEL: 255
+  IMAGE_SIZE: [616, 616]
+  LR: 0.005
+  MOMENTUM: 0.9
+  MULTI_SCALE: False
+  NESTEROV: False
+  OPTIMIZER: sgd
+  RESUME: False
+  SCALE_FACTOR: 1
+  SHUFFLE: True
+  WD: 0.0005
+WORKERS: 8
+2023-12-22 15:10:25,598 Attention!!!
+2023-12-22 15:10:25,599 Loaded 302 parameters!
+2023-12-22 15:10:25,599 Over!!!
+2023-12-22 15:11:26,656 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:26,657 Epoch: [0/200] Iter:[0/9368], Time: 59.92, lr: [0.005], Loss: 20.731657, Acc:0.035396, Semantic loss: 8.562308, BCE loss: 4.818458, SB loss: 7.350891, Data Time: 5.86
+2023-12-22 15:11:29,898 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:29,900 Epoch: [0/200] Iter:[10/9368], Time: 0.32, lr: [0.0049999759820602], Loss: 11.908200, Acc:0.408859, Semantic loss: 5.301854, BCE loss: 2.635783, SB loss: 3.970563, Data Time: 0.00
+2023-12-22 15:11:33,484 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:33,484 Epoch: [0/200] Iter:[20/9368], Time: 0.36, lr: [0.004999951964107581], Loss: 9.287984, Acc:0.607311, Semantic loss: 4.161878, BCE loss: 2.109458, SB loss: 3.016648, Data Time: 0.00
+2023-12-22 15:11:37,107 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:37,110 Epoch: [0/200] Iter:[30/9368], Time: 0.36, lr: [0.004999927946142142], Loss: 7.624342, Acc:0.684528, Semantic loss: 3.372350, BCE loss: 1.796714, SB loss: 2.455278, Data Time: 0.00
+2023-12-22 15:11:40,611 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:40,612 Epoch: [0/200] Iter:[40/9368], Time: 0.35, lr: [0.004999903928163885], Loss: 6.624905, Acc:0.730256, Semantic loss: 2.900750, BCE loss: 1.599588, SB loss: 2.124568, Data Time: 0.00
+2023-12-22 15:11:44,255 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:44,255 Epoch: [0/200] Iter:[50/9368], Time: 0.36, lr: [0.004999879910172808], Loss: 5.958208, Acc:0.760934, Semantic loss: 2.591207, BCE loss: 1.461484, SB loss: 1.905517, Data Time: 0.00
+2023-12-22 15:11:47,758 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:47,759 Epoch: [0/200] Iter:[60/9368], Time: 0.35, lr: [0.004999855892168912], Loss: 5.474419, Acc:0.783997, Semantic loss: 2.358460, BCE loss: 1.354839, SB loss: 1.761119, Data Time: 0.00
+2023-12-22 15:11:51,442 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:51,443 Epoch: [0/200] Iter:[70/9368], Time: 0.37, lr: [0.004999831874152196], Loss: 5.113428, Acc:0.801432, Semantic loss: 2.191018, BCE loss: 1.271400, SB loss: 1.651010, Data Time: 0.00
+2023-12-22 15:11:54,950 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:54,950 Epoch: [0/200] Iter:[80/9368], Time: 0.35, lr: [0.00499980785612266], Loss: 4.822112, Acc:0.815652, Semantic loss: 2.052517, BCE loss: 1.207433, SB loss: 1.562163, Data Time: 0.01
+2023-12-22 15:11:58,418 Summary name main loss is illegal; using main_loss instead.
+2023-12-22 15:11:58,421 Epoch: [0/200] Iter:[90/9368], Time: 0.35, lr: [0.004999783838080304], Loss: 4.598888, Acc:0.826379, Semantic loss: 1.947904, BCE loss: 1.158067, SB loss: 1.492917, Data Time: 0.00

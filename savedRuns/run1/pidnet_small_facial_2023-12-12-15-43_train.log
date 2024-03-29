@@ -1,0 +1,64 @@
+2023-12-12 15:43:48,887 Namespace(cfg='configs/facial/pidnet_small_facial.yaml', opts=[], seed=304)
+2023-12-12 15:43:48,888 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  DATASET: facial
+  EXTRA_TRAIN_SET: 
+  NUM_CLASSES: 15
+  ROOT: data/
+  TEST_SET: list/facial/val.lst
+  TRAIN_SET: list/facial/train.lst
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  BALANCE_WEIGHTS: [0.4, 1.0]
+  CLASS_BALANCE: False
+  OHEMKEEP: 131072
+  OHEMTHRES: 0.9
+  SB_WEIGHTS: 1.0
+  USE_OHEM: True
+MODEL:
+  ALIGN_CORNERS: True
+  NAME: pidnet_s
+  NUM_OUTPUTS: 2
+  PRETRAINED: pretrained_models/imagenet/PIDNet_S_ImageNet.pth.tar
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 10
+TEST:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 1
+  FLIP_TEST: False
+  IMAGE_SIZE: [616, 616]
+  MODEL_FILE: 
+  MULTI_SCALE: False
+  OUTPUT_INDEX: 1
+TRAIN:
+  BASE_SIZE: 616
+  BATCH_SIZE_PER_GPU: 12
+  BEGIN_EPOCH: 0
+  END_EPOCH: 200
+  EXTRA_EPOCH: 0
+  EXTRA_LR: 0.001
+  FLIP: False
+  IGNORE_LABEL: 255
+  IMAGE_SIZE: [616, 616]
+  LR: 0.005
+  MOMENTUM: 0.9
+  MULTI_SCALE: False
+  NESTEROV: False
+  OPTIMIZER: sgd
+  RESUME: False
+  SCALE_FACTOR: 1
+  SHUFFLE: True
+  WD: 0.0005
+WORKERS: 8
+2023-12-12 15:43:49,376 Attention!!!
+2023-12-12 15:43:49,377 Loaded 302 parameters!
+2023-12-12 15:43:49,377 Over!!!
+2023-12-12 15:45:26,264 Epoch: [0/200] Iter:[0/9368], Time: 90.87, lr: [0.005], Loss: 20.732288, Acc:0.035393, Semantic loss: 8.562438, BCE loss: 4.818322, SB loss: 7.351528, Data Time: 6.70
+2023-12-12 15:45:32,938 Epoch: [0/200] Iter:[10/9368], Time: 0.67, lr: [0.0049999759820602], Loss: 11.834742, Acc:0.409457, Semantic loss: 5.263722, BCE loss: 2.641035, SB loss: 3.929986, Data Time: 0.00
+2023-12-12 15:45:40,341 Epoch: [0/200] Iter:[20/9368], Time: 0.74, lr: [0.004999951964107581], Loss: 9.159080, Acc:0.609575, Semantic loss: 4.083622, BCE loss: 2.097533, SB loss: 2.977925, Data Time: 0.00
