@@ -1,1 +1,1 @@
-python tools/testFacial.py --a 'pidnet-s' --n 15 --c 'normal' --p 'output/facial/0005-24-adamw-syn/best.pt'
+python tools/testFacial.py --a 'pidnet-s' --n 15 --c 'normal' --p '<path to model .pt>'

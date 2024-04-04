@@ -11,8 +11,8 @@ PRINT_FREQ: 10
 DATASET:
   DATASET: facial
   ROOT: data/
-  TEST_SET: 'list/facial/val.lst'
-  TRAIN_SET: 'list/synth_limited/train.lst'
+  TEST_SET: 'list/facial/test.lst'
+  TRAIN_SET: 'list/facial/train.lst'
   NUM_CLASSES: 15
 MODEL:
   NAME: pidnet_s
@@ -32,7 +32,7 @@ TRAIN:
   BATCH_SIZE_PER_GPU: 24
   SHUFFLE: true
   BEGIN_EPOCH: 0
-  END_EPOCH: 40
+  END_EPOCH: 25
   RESUME: false 
   OPTIMIZER: adamw
   LR: 0.0005
